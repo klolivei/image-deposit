@@ -19,7 +19,7 @@ const actions = {
 
         await api.uploadImages(images, token)
 
-        router.push('/')
+        router.push('/list')
     }
 }
 const mutations = {

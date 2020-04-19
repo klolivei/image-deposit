@@ -11,7 +11,7 @@ export const router = new VueRouter({
     mode:'hash',
     routes: [
         { path: '*', component: AuthHandler },
-        { path: '', component: ImageList },
+        { path: '/list', component: ImageList },
         { path: '/upload', component: UploadForm },
     ]
 })

@@ -24,7 +24,7 @@ const actions = {
         commit('setToken', tokens.access_token)
         window.localStorage.setItem(IMGUR_TOKEN, tokens.access_token)
 
-        router.push('/')
+        router.push('/list')
     }
 }
 const mutations = {
