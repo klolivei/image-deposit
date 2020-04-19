@@ -9,6 +9,7 @@ Vue.use(VueRouter);
 
 export const router = new VueRouter({
     mode:'history',
+    base: '/image-deposit/',
     routes: [
         { path: '/oauth2/callback', component: AuthHandler },
         { path: '/', component: ImageList },
