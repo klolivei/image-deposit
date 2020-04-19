@@ -1,14 +1,15 @@
 import qs from 'qs';
 import axios from 'axios';
 
-const CLIENT_ID = 'f06db3447ad6100';
+const CLIENT_ID_DEV = 'a0b0391a47dac2c';
+const CLIENT_ID_PROD = '2f5ce5d2d8a54b0'
 const ROOT_URL = 'https://api.imgur.com/';
 
 
 export default{
     login() {
         const querystring = {
-            client_id: CLIENT_ID,
+            client_id: CLIENT_ID_DEV,
             response_type: 'token'
         }
         window.location = `${ROOT_URL}oauth2/authorize?${qs.stringify(querystring)}`;
