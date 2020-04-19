@@ -18,7 +18,9 @@ const actions = {
         api.login()
     },
     finalizeLogin: ({ commit }, hash) => {
-        const tokens = qs.parse(hash.replace("#", ""))
+        const a = hash.substring(2)
+        const tokens = qs.parse(a)
+        console.log(tokens)
         commit('setToken', tokens.access_token)
         window.localStorage.setItem(IMGUR_TOKEN, tokens.access_token)
 

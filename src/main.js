@@ -8,10 +8,10 @@ import UploadForm from './components/UploadForm'
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
-    mode:'history',
+    mode:'hash',
     routes: [
         { path: '*', component: AuthHandler },
-        { path: '/', component: ImageList },
+        { path: '', component: ImageList },
         { path: '/upload', component: UploadForm },
     ]
 })

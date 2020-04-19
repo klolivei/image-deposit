@@ -12,6 +12,8 @@ export default {
          ...mapActions(['finalizeLogin'])
     },
     created(){
+        console.log('auth element')
+        console.log(window.location.hash)
         this.finalizeLogin(window.location.hash)
     }
 }
