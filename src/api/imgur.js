@@ -5,8 +5,6 @@ const CLIENT_ID_DEV = 'a0b0391a47dac2c';
 const CLIENT_ID_PROD = '2f5ce5d2d8a54b0'
 const ROOT_URL = 'https://api.imgur.com/';
 
-console.log(process.env.NODE_ENV)
-
 export default{
     login() {
         const querystring = {
