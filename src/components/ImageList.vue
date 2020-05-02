@@ -15,7 +15,9 @@ export default {
         ...mapGetters(['isLoggedIn', 'allImages'])
     },
     created() {
-        this.fetchImages();
+        if(this.isLoggedIn){
+            this.fetchImages();
+        }
     }
 }
 </script>

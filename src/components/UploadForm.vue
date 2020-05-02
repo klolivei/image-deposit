@@ -1,5 +1,5 @@
 <template>
-    <div class="dropper">
+    <div v-if= "isLoggedIn" class="dropper">
         <input 
         type="file" 
         @change="uploadImages($event.target.files)"
@@ -11,13 +11,16 @@
 </template>
 
 <script>
-import { mapActions }  from 'vuex'
+import { mapActions, mapGetters }  from 'vuex'
 
 export default {
     name: 'UploadForm',
     methods: {
         ...mapActions(["uploadImages"])
-    }
+    },
+    computed: {
+        ...mapGetters(['isLoggedIn', 'allImages'])
+    },
 }
 </script>
 

@@ -18,13 +18,12 @@ const actions = {
         api.login()
     },
     finalizeLogin: ({ commit }, hash) => {
-        const a = hash.substring(2)
+        const a = hash.substring(1)
         const tokens = qs.parse(a)
-        console.log(tokens)
         commit('setToken', tokens.access_token)
         window.localStorage.setItem(IMGUR_TOKEN, tokens.access_token)
 
-        router.push('/list')
+        router.push('/')
     }
 }
 const mutations = {
